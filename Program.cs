@@ -3,32 +3,47 @@
 var extpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "VSCode/extensions.txt");
 var exts = await File.ReadAllLinesAsync(extpath);
 
+int success = 0, failed = 0;
+
 foreach (var ext in exts)
 {
     Console.WriteLine($"Installing {ext}");
-    var startInfo = new ProcessStartInfo();
-    startInfo.FileName = "code";
-    startInfo.Arguments = $"--install-extension {ext}";
-    startInfo.UseShellExecute = false;
-    startInfo.RedirectStandardOutput = true;
 
-    using (var process = Process.Start(startInfo))
+    try
     {
+        var startInfo = new ProcessStartInfo();
+        startInfo.FileName = "code";
+        startInfo.Arguments = $"--install-extension {ext}";
 
-        if (process == null)
+        using (var process = Process.Start(startInfo))
         {
-            Console.WriteLine("Failed to create code process!");
-        }
-        else
-        {
-            process.OutputDataReceived += (s, e) => { };
 
-            await process.WaitForExitAsync();
-
-            if (process.ExitCode != 0)
-                Console.WriteLine($"Failed to install {ext} (or code returned {process.ExitCode}!");
+            if (process == null)
+            {
+                Console.WriteLine("Failed to create code process!");
+            }
             else
-                Console.WriteLine("Extension installed successfully!");
+            {
+                await process.WaitForExitAsync();
+
+                if (process.ExitCode != 0)
+                {
+                    Console.WriteLine($"Failed to install {ext} (or code returned {process.ExitCode}!");
+                    failed++;
+                }
+                else
+                {
+                    Console.WriteLine("Extension installed successfully!");
+                    success++;
+                }
+            }
         }
     }
+    catch (Exception)
+    {
+        Console.WriteLine($"Failed to install extension {ext}");
+        failed++;
+    }
 }
+
+Console.WriteLine($"Installed {success} extensions, {failed} failed!");
