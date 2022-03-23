@@ -1,0 +1,15 @@
+/Users/gabriel/Projetos/CSharp/codext/bin/Debug/net6.0/codext
+/Users/gabriel/Projetos/CSharp/codext/bin/Debug/net6.0/codext.deps.json
+/Users/gabriel/Projetos/CSharp/codext/bin/Debug/net6.0/codext.runtimeconfig.json
+/Users/gabriel/Projetos/CSharp/codext/bin/Debug/net6.0/codext.dll
+/Users/gabriel/Projetos/CSharp/codext/bin/Debug/net6.0/codext.pdb
+/Users/gabriel/Projetos/CSharp/codext/obj/Debug/net6.0/codext.csproj.AssemblyReference.cache
+/Users/gabriel/Projetos/CSharp/codext/obj/Debug/net6.0/codext.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gabriel/Projetos/CSharp/codext/obj/Debug/net6.0/codext.AssemblyInfoInputs.cache
+/Users/gabriel/Projetos/CSharp/codext/obj/Debug/net6.0/codext.AssemblyInfo.cs
+/Users/gabriel/Projetos/CSharp/codext/obj/Debug/net6.0/codext.csproj.CoreCompileInputs.cache
+/Users/gabriel/Projetos/CSharp/codext/obj/Debug/net6.0/codext.dll
+/Users/gabriel/Projetos/CSharp/codext/obj/Debug/net6.0/refint/codext.dll
+/Users/gabriel/Projetos/CSharp/codext/obj/Debug/net6.0/codext.pdb
+/Users/gabriel/Projetos/CSharp/codext/obj/Debug/net6.0/codext.genruntimeconfig.cache
+/Users/gabriel/Projetos/CSharp/codext/obj/Debug/net6.0/ref/codext.dll
